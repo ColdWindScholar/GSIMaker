@@ -30,7 +30,7 @@ if os.name == 'nt':
 else:
     sys.stdout.write("\x1b]2;OEM Generic System Image Maker\x07")
     sys.stdout.flush()
-__author__ = ["ColdWindScholar", "Child I", "XETOB"]
+__author__ = ["ColdWindScholar", "XETOB"]
 __version__ = "1.0.1"
 if os.name == 'nt':
     prog_path = os.getcwd()

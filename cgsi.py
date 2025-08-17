@@ -235,7 +235,7 @@ def generate_markdown(mark_down_file: str):
         "Xiaomi":"MIUI","meizu":"Flyme","vivo":"OriginOS","BLUEFOX":"FoxOS"
     }
     with open(mark_down_file, 'w', encoding='utf-8', newline='\n') as f:
-        f.write(f"## {f"HyperOS{is_hyper_os[2:]}" if is_hyper_os.startswith("OS") else oem_os_dict.get(manufacturer, manufacturer + "OS")}\n")
+        f.write(f"## {f"HyperOS{is_hyper_os[2:]}" if is_hyper_os.startswith('OS') else oem_os_dict.get(manufacturer, manufacturer + "OS")}\n")
         f.write(f"## Ported from {get_prop(build_file, 'ro.product.system.model')}({get_prop(build_file, 'ro.product.system.device')})\n")
         f.write('\n')
         f.write('## Info\n')

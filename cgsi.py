@@ -12,16 +12,16 @@ import platform
 import subprocess
 import sys
 import zipfile
+from shutil import rmtree, move, copy, which
 
 from src import imgextractor, ozipdecrypt
+from src.contextpatch import main as contextpatch
 from src.downloader import download
+from src.fspatch import main as fspatch
 from src.gettype import gettype
 from src.payload_extract import extract_partitions_from_payload
 from src.posix import readlink, symlink
 from src.sdat2img import Sdat2img
-from shutil import rmtree, move, copy, copytree, which
-from src.fspatch import main as fspatch
-from src.contextpatch import main as contextpatch
 
 if os.name == 'nt':
     import ctypes
